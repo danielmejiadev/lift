@@ -1,0 +1,70 @@
+{
+  "name": "lift",
+  "version": "0.1.0",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start --reset-cache",
+    "test": "jest --verbose --config jest.config.json --no-cache -u --coverage",
+    "test:watch": "jest --config=jest.config.json --watch --coverage",
+    "lint": "eslint --ext .jsx,.js,.tsx app --format html --output-file reports/eslint.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danielmejiadev/lift.git"
+  },
+  "keywords": [
+    "react-native",
+    "reactnative",
+    "chat",
+    "UI"
+  ],
+  "author": "Daniel Mejia",
+  "homepage": "https://github.com/danielmejiadev/lift",
+  "dependencies": {
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "5.4.3",
+    "@react-navigation/stack": "5.3.7",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-chatting": "file:.yalc/react-native-chatting",
+    "react-native-elements": "2.0.0",
+    "react-native-gesture-handler": "1.6.1",
+    "react-native-reanimated": "1.9.0",
+    "react-native-safe-area-context": "2.0.0",
+    "react-native-screens": "2.8.0",
+    "react-native-sensitive-info": "5.5.5",
+    "react-native-vector-icons": "6.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.6.2",
+    "@babel/runtime": "7.6.2",
+    "@react-native-community/eslint-config": "0.0.7",
+    "@types/enzyme": "3.10.5",
+    "@types/jest": "24.0.24",
+    "@types/react-native": "0.61.15",
+    "@types/react-test-renderer": "16.9.1",
+    "@typescript-eslint/eslint-plugin": "2.12.0",
+    "@typescript-eslint/parser": "2.12.0",
+    "babel-jest": "26.0.1",
+    "babel-plugin-module-resolver": "4.0.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "eslint": "6.5.1",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "jest": "24.9.0",
+    "metro-react-native-babel-preset": "0.58.0",
+    "prettier": "2.0.4",
+    "react-dom": "16.13.1",
+    "react-test-renderer": "16.11.0",
+    "typescript": "3.7.3",
+    "typescript-transform-paths": "1.1.14"
+  }
+}
