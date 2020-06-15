@@ -2,8 +2,14 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-// Screens
+// Navigation
+import Navigation from '@app/navigation';
+
+// Under test
 import { App } from '../App';
+
+// Mocks
+jest.mock('@app/navigation', () => jest.fn());
 
 /**
  * @file App.spec.tsx
@@ -20,6 +26,6 @@ describe('Root App', () => {
   afterEach(() => jest.restoreAllMocks());
 
   it('render correctly', async () => {
-    expect(component).toMatchSnapshot();
+    expect(component.find(Navigation)).toBeTruthy();
   });
 });

@@ -10,7 +10,8 @@
 	},
 	"setupFiles": [
 		"<rootDir>/jest/setup.js",
-		"./node_modules/react-native-gesture-handler/jestSetup.js"
+		"./node_modules/react-native-gesture-handler/jestSetup.js",
+		"./node_modules/react-native-chatting/dist/jest/setup.js"
 	],
 	"transformIgnorePatterns": [
 		"node_modules/(?!(jest-)?react-native|@react-native-community|react-native-elements)"
