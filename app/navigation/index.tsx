@@ -13,6 +13,7 @@ import Auth from '@app/screens/auth';
 
 // MainStack
 import ChannelList from '@app/screens/main/ChannelList';
+import Chat from '@app/screens/main/Chat';
 
 /**
  * Stack react navigation.
@@ -50,7 +51,12 @@ export function Navigation(): React.ReactElement {
       <Stack.Navigator>
         {
           session
-            ? <Stack.Screen name="ChatList" component={ChannelList} options={{ headerShown: false }} />
+            ? (
+              <>
+                <Stack.Screen name="ChatList" component={ChannelList} options={{ headerShown: false }} />
+                <Stack.Screen name="Chat" component={Chat} />
+              </>
+            )
             : <Stack.Screen name="Auth" component={Auth} options={{ headerShown: false }} />
         }
       </Stack.Navigator>

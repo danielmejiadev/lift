@@ -19,6 +19,17 @@ const CREDENTIALS = {
   authSecret: 'Pp745ntPs4TW4Wf',
 };
 
+const config = {
+  chat: {
+    streamManagement: {
+      enable: true,
+    },
+  },
+  debug: {
+    mode: 0,
+  },
+};
+
 /**
  * App root component.
  * @returns The react root component.
@@ -26,7 +37,7 @@ const CREDENTIALS = {
 export function App(): React.ReactElement {
   return (
     <ThemeProvider theme={theme}>
-      <ChatProvider credentials={CREDENTIALS}>
+      <ChatProvider credentials={CREDENTIALS} config={config}>
         <SafeAreaView style={{ flex: 1 }}>
           <Navigation />
         </SafeAreaView>

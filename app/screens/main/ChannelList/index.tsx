@@ -10,16 +10,20 @@ import logo from '@app/assets/logo.png';
  * Defines the list of channels.
  * @returns The channes list.
  */
-export function ChannelListScreen(): React.ReactElement {
+export function ChannelListScreen(props: any): React.ReactElement {
+  const { navigation } = props;
+  const { navigate } = navigation;
+  const goToChat = React.useCallback((channel) => navigate('Chat', { channel }), [navigate]);
+
   const { signOut } = useAuth();
 
   return (
     <View style={{ flex: 1 }}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'white', height: 50 }}>
         <Image source={logo} resizeMode="contain" style={{ height: 40, width: 40 }} />
-        <Button onPress={() => signOut()} title="Logout" />
+        <Button onPress={(): void => signOut()} title="Logout" />
       </View>
-      <ChannelList emptyChat="No chats yet" />
+      <ChannelList emptyChat="No chats yet" onSelect={goToChat} />
     </View>
   );
 }
